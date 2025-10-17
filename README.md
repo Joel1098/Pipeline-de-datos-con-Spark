@@ -13,6 +13,9 @@ Este proyecto implementa un pipeline ETL completo que:
 
 ## 🏗️ Arquitectura del Proyecto
 
+Se opta por un enfoque modular para una mejor organización de los elementos del proyecto tanto para las 
+etapas de ETL como de las configuraciones de bases de datos, sesión en spark y el manejo de excepciones.
+
 ```
 ETL/
 ├── main.py                 # Archivo principal del pipeline ETL
@@ -81,16 +84,16 @@ Crea una base de datos PostgreSQL y ajusta la configuración en `ETL/config/conf
 
 ```ini
 [postgres]
-user = tu_usuario
-password = tu_contraseña
+user = user
+password = password
 host = localhost
 port = 5432
-database = productos_db
+database = tu_base_de_datos
 jdbc_driver_path = config/postgresql-42.7.8.jar
 ```
 
-### 5. Crear plantilla de configuración (opcional)
-Si quieres mantener tu configuración privada, puedes usar `config.ini.template` como base.
+### 5. Plantilla de configuración (opcional)
+Si se planea mantener una configuración privada, puedes usar `config.ini.template` como base.
 
 ## ▶️ Ejecución
 
@@ -136,7 +139,7 @@ python main.py
 
 ## 🚨 Manejo de Errores
 
-El proyecto incluye un sistema robusto de manejo de errores con excepciones personalizadas:
+El proyecto incluye excepciones personalizadas para el manejo de errores en cada etapa del ETL:
 
 - `ExtractError`: Errores durante la extracción de datos
 - `TransformError`: Errores durante la transformación
@@ -158,18 +161,7 @@ Las contribuciones son bienvenidas. Por favor:
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📝 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 👨‍💻 Autor
-
-**Joel** - [Tu perfil de GitHub]
 
 ## 🔄 Versiones
 
 - **v1.0.0** - Versión inicial con funcionalidad ETL completa
-
-## 📞 Soporte
-
-Si tienes preguntas o necesitas ayuda, por favor abre un issue en este repositorio.
