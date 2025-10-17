@@ -1,0 +1,7 @@
+[postgres]
+user = TU_USUARIO_POSTGRES
+password = TU_CONTRASEÑA
+host = localhost
+port = 5432
+database = nombre_de_tu_bd
+jdbc_driver_path = config/postgresql-42.7.3.jar
