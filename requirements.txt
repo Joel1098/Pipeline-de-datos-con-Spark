@@ -1,0 +1,5 @@
+# requirements.txt
+pyspark
+requests
+configparser
+psycopg2-binary

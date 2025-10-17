@@ -1,0 +1,10 @@
+# .gitignore
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+datos_limpios.parquet/
+reporte_por_categoria.parquet/
+config/
